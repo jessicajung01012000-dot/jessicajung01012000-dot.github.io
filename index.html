@@ -1,1 +1,291 @@
-tiktok-developers-site-verification=bnKNUpu4000sECv66hqW05YsiXVr2SdG
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TikTok Publishing Automation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1f2328;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .hero {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    p {
+      line-height: 1.6;
+      margin: 0 0 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .field {
+      margin-bottom: 14px;
+    }
+    .label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 88px;
+    }
+    .thumbnail-preview {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      background: #f3f4f6;
+    }
+    .video-box {
+      border: 1px dashed #cbd5e1;
+      border-radius: 10px;
+      padding: 18px;
+      background: #f8fafc;
+      font-size: 14px;
+      color: #475569;
+    }
+    .flow {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+    .flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .step {
+      background: #111827;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+    .actions {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+    button {
+      background: #111827;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.95;
+    }
+    .message {
+      margin-top: 14px;
+      color: #065f46;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .footer-links a {
+      margin-right: 18px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>TikTok Publishing Automation</h1>
+      <p>
+        This web service demonstrates an automation workflow used to schedule and publish short videos to TikTok.
+      </p>
+      <p>
+        Content data is prepared through n8n, including video URL, thumbnail URL, caption text, hashtags, full caption, row reference, and publishing status before sending the content to TikTok through API integration after authorization.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Content Input Preview</h2>
+
+        <div class="field">
+          <label class="label" for="titleyoutube">Content Title</label>
+          <input id="titleyoutube" type="text" value="Demo TikTok Video Title" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="video_url">Video URL</label>
+          <input id="video_url" type="text" value="https://example.com/video.mp4" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="thumbnail_url">Thumbnail URL</label>
+          <input id="thumbnail_url" type="text" value="https://example.com/thumbnail.jpg" oninput="updateThumbnail()" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="caption_text">Caption Text</label>
+          <textarea id="caption_text">This is a demo caption for a scheduled TikTok video.</textarea>
+        </div>
+
+        <div class="field">
+          <label class="label" for="hashtag_text">Hashtags</label>
+          <input id="hashtag_text" type="text" value="#tiktok #automation #n8n" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="caption_full">Full Caption</label>
+          <textarea id="caption_full">This is a demo caption for a scheduled TikTok video.
+
+#tiktok #automation #n8n</textarea>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Publishing Job Preview</h2>
+
+        <div class="field">
+          <label class="label">Thumbnail Preview</label>
+          <img
+            id="thumbnail_preview"
+            class="thumbnail-preview"
+            src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80"
+            alt="Thumbnail preview"
+          />
+        </div>
+
+        <div class="field">
+          <label class="label">Video Source</label>
+          <div class="video-box">
+            The selected video URL will be passed into the n8n workflow and prepared for TikTok publishing.
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="sheet_row">Sheet Row</label>
+          <input id="sheet_row" type="text" value="12" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="post_status">Post Status</label>
+          <select id="post_status">
+            <option selected>Scheduled</option>
+            <option>Draft</option>
+            <option>Ready</option>
+            <option>Published</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="label" for="schedule_time">Scheduled Time</label>
+          <input id="schedule_time" type="datetime-local" />
+        </div>
+      </section>
+    </div>
+
+    <section class="flow">
+      <h2>Workflow Overview</h2>
+      <p>
+        This workflow reads content data from a spreadsheet, retrieves the video and thumbnail, formats the publishing fields in n8n, and prepares the content for TikTok publishing.
+      </p>
+      <div class="flow-steps">
+        <div class="step">Read Sheet Row</div>
+        <div class="step">Get Video URL</div>
+        <div class="step">Get Thumbnail URL</div>
+        <div class="step">Merge Content</div>
+        <div class="step">Edit Fields</div>
+        <div class="step">Publish to TikTok</div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <h2>Demo Action</h2>
+      <p>
+        This button represents the step where the prepared content is sent to the n8n automation workflow for TikTok publishing.
+      </p>
+      <button type="button" onclick="triggerDemo()">Trigger TikTok Publish</button>
+      <div class="message" id="message"></div>
+    </section>
+
+    <section class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </section>
+  </div>
+
+  <script>
+    function triggerDemo() {
+      const message = document.getElementById("message");
+      message.innerText =
+        "Demo only: the selected content has been prepared and sent to the n8n workflow for TikTok publishing through API integration after authorization.";
+    }
+
+    function updateThumbnail() {
+      const input = document.getElementById("thumbnail_url").value.trim();
+      const preview = document.getElementById("thumbnail_preview");
+      if (input) {
+        preview.src = input;
+      }
+    }
+  </script>
+</body>
+</html>
