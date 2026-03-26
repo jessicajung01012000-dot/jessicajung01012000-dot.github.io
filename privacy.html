@@ -1,46 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy</title>
-<style>
-body{
-font-family:Arial, Helvetica, sans-serif;
-max-width:800px;
-margin:40px auto;
-line-height:1.6;
-padding:0 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Video Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-<body>
+    <!-- Header Minimal -->
+    <header class="bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="font-bold text-xl tracking-tight text-black hover:opacity-80 transition">&larr; Video Automation</a>
+        </div>
+    </header>
 
-<h1>Privacy Policy</h1>
+    <main class="flex-grow py-12 px-4 sm:px-6">
+        <article class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-200">
+            <h1 class="text-3xl font-bold mb-2">Privacy Policy</h1>
+            <p class="text-gray-500 text-sm mb-8">Effective Date: March 26, 2026</p>
 
-<p>This service respects user privacy.</p>
+            <div class="prose prose-blue max-w-none text-gray-700 space-y-6">
+                <p>This Privacy Policy explains how <strong>Video Automation</strong> ("we," "our," or "us") collects, uses, protects, and discloses your information when you use our automation workflow service ("Service"). Our Service is built to facilitate the automated publishing of content to social media platforms, including TikTok, via official API integrations.</p>
+                <p>By accessing or using our Service, you agree to the data practices described in this Privacy Policy. If you do not agree, please do not use the Service.</p>
 
-<h2>Information Collection</h2>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">1. Information We Collect</h2>
+                <p>When you authorize our application to connect with your TikTok account (or other supported platforms), we only request the minimum permissions (scopes) strictly necessary to provide the automation functionality. The data we collect includes:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Authentication Data:</strong> OAuth access tokens and refresh tokens provided by TikTok to authenticate our application's requests on your behalf.</li>
+                    <li><strong>Basic Profile Information:</strong> Account ID, username, display name, and profile picture URL solely to verify the correct account is connected and to display the connection status within our internal interface.</li>
+                    <li><strong>Content Data:</strong> Video files, titles, descriptions, and metadata that you explicitly input into our workflow to be published to your TikTok account.</li>
+                    <li><strong>Technical and Log Data:</strong> Error logs, API response codes, and timestamps generated during the execution of automation tasks (used exclusively for debugging and ensuring system reliability).</li>
+                </ul>
 
-<p>This automation workflow does not sell or distribute personal data.</p>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">2. How We Use Your Information</h2>
+                <p>We use the collected information strictly for the following purposes:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>To authenticate your identity with TikTok and establish a secure API connection.</li>
+                    <li>To execute the core functionality of the Service: uploading and publishing your specified video content to your TikTok account.</li>
+                    <li>To monitor the performance of our automation workflows and troubleshoot technical errors.</li>
+                    <li>To comply with our legal obligations and enforce our Terms of Service.</li>
+                </ul>
+                <p class="font-medium text-black">We explicitly declare that we DO NOT use your data to train artificial intelligence (AI) models, nor do we use it for targeted advertising.</p>
 
-<p>The service may use authorization tokens or account permissions required to publish video content through official social media APIs.</p>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">3. Data Retention and Storage</h2>
+                <p><strong>Video Automation operates primarily as a transient pass-through automation tool.</strong></p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Transient Processing:</strong> Video files and metadata processed through our workflows are kept in temporary memory only for the duration required to successfully transmit them to TikTok's servers. We do not maintain a permanent media database of your videos.</li>
+                    <li><strong>Token Storage:</strong> OAuth tokens are stored securely using industry-standard encryption within our automation environment to maintain the active connection.</li>
+                    <li><strong>Log Retention:</strong> System execution logs (which may contain basic account IDs but no passwords or content) are retained for a maximum of 30 days for debugging purposes before being automatically purged.</li>
+                </ul>
 
-<h2>Use of Data</h2>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">4. Third-Party Sharing and Disclosure</h2>
+                <p>We respect your privacy and <strong>do not sell, rent, or lease</strong> your personal information or TikTok data to any third parties. We only share information under the following limited circumstances:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>With the Platforms Themselves:</strong> Data is inherently transmitted to TikTok's API to fulfill your publishing requests. Your use of TikTok is subject to TikTok's own <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Privacy Policy</a>.</li>
+                    <li><strong>Legal Requirements:</strong> If required by law, subpoena, or other legal processes, or if we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, or investigate fraud.</li>
+                </ul>
 
-<p>Data is used only for the purpose of publishing content requested by the user through supported platforms.</p>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">5. Data Deletion and User Rights</h2>
+                <p>You retain full ownership and control over your data. You have the right to access, correct, or delete your personal data at any time.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Revoking Access:</strong> You can instantly revoke our application's access to your account by visiting your TikTok App settings (Settings and Privacy > Security and Login > Manage app permissions) and removing "Video Automation".</li>
+                    <li><strong>Complete Data Deletion Request:</strong> To request the complete removal of your authentication tokens, profile data, and any associated logs from our systems, please send an email to <strong><a href="mailto:jessicajung01012000@gmail.com" class="text-blue-600 underline">jessicajung01012000@gmail.com</a></strong> with the subject line "Data Deletion Request". We are committed to processing and fulfilling your deletion request within 7 business days and will send you a confirmation email once completed.</li>
+                </ul>
 
-<h2>Third-Party Platforms</h2>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">6. Security Measures</h2>
+                <p>We implement robust, industry-standard security measures to protect your data during transit and at rest. All communications between our Service and third-party APIs (including TikTok) are encrypted using HTTPS/TLS protocols. Access to the underlying automation infrastructure is strictly limited and protected by multi-factor authentication.</p>
 
-<p>This service interacts with third-party platforms such as TikTok using their official APIs. Users must comply with the policies and terms of those platforms.</p>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">7. Children's Privacy</h2>
+                <p>Our Service is intended for use by adults and businesses. We do not knowingly collect personal information from children under the age of 13 (or the applicable age of digital consent in your jurisdiction). If we become aware that we have inadvertently collected such data, we will take immediate steps to delete it from our records.</p>
 
-<h2>Data Protection</h2>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">8. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, API guidelines from third-party platforms, or legal requirements. We will post the updated policy on this page with a revised "Effective Date". Your continued use of the Service after any changes constitutes your acceptance of the new Privacy Policy.</p>
 
-<p>Reasonable measures are taken to protect data used during automation workflows.</p>
+                <h2 class="text-xl font-semibold text-black mt-8 mb-4">9. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data processing practices, please contact our Data Protection Officer at:</p>
+                <p class="font-medium bg-gray-100 p-4 rounded-lg inline-block mt-2">Email: jessicajung01012000@gmail.com</p>
+            </div>
+        </article>
+    </main>
 
-<h2>Contact</h2>
-
-<p>If you have questions regarding this privacy policy, please contact the service administrator.</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto py-6 text-center text-sm text-gray-500">
+        &copy; 2026 Video Automation. <a href="terms.html" class="hover:text-black underline ml-2">Terms of Service</a>
+    </footer>
 
 </body>
 </html>
