@@ -8,12 +8,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; } /* Thêm hiệu ứng cuộn mượt */
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-100">
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold">
@@ -22,49 +23,55 @@
                 <span class="font-bold text-xl tracking-tight">Video Automation</span>
             </div>
             <nav class="hidden md:flex gap-6">
-                <a href="#about" class="text-sm font-medium text-gray-600 hover:text-black">About</a>
-                <a href="privacy.html" class="text-sm font-medium text-gray-600 hover:text-black">Privacy Policy</a>
-                <a href="terms.html" class="text-sm font-medium text-gray-600 hover:text-black">Terms of Service</a>
+                <!-- Link About trỏ xuống id="about" -->
+                <a href="#about" class="text-sm font-medium text-gray-600 hover:text-black transition">About</a>
+                <a href="privacy.html" class="text-sm font-medium text-gray-600 hover:text-black transition">Privacy Policy</a>
+                <a href="terms.html" class="text-sm font-medium text-gray-600 hover:text-black transition">Terms of Service</a>
             </nav>
-            <!-- Changed mailto link to direct Gmail compose link -->
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jessicajung01012000@gmail.com" target="_blank" rel="noopener noreferrer" class="bg-black text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition">Contact Support</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <main class="flex-grow">
-        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <!-- Hero Section (Phần hiển thị đầu tiên) -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
                 Automated Video Publishing <br class="hidden md:block"/> Workflow Integration
             </h1>
             <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
                 Video Automation is an internal automation workflow designed to streamline content distribution. It securely connects content sources to your social media channels for automated posting.
             </p>
-            
-            <div class="grid md:grid-cols-3 gap-8 mt-16 text-left">
-                <!-- Feature 1 -->
-                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
-                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </section>
+
+        <!-- About Section (Phần About được đặt ở dưới để có không gian cuộn) -->
+        <section id="about" class="bg-white py-20 border-t border-gray-100 scroll-mt-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12">About This Integration</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <!-- Feature 1 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Automated Publishing</h3>
+                        <p class="text-gray-500 text-sm">Upload and publish video content directly to your connected accounts without manual intervention.</p>
                     </div>
-                    <h3 class="font-semibold mb-2">Automated Publishing</h3>
-                    <p class="text-gray-500 text-sm">Upload and publish video content directly to your connected accounts without manual intervention.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
-                    <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <!-- Feature 2 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Secure API Connection</h3>
+                        <p class="text-gray-500 text-sm">Utilizes official API endpoints with secure OAuth authentication to ensure account safety.</p>
                     </div>
-                    <h3 class="font-semibold mb-2">Secure API Connection</h3>
-                    <p class="text-gray-500 text-sm">Utilizes official API endpoints with secure OAuth authentication to ensure account safety.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
-                    <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <!-- Feature 3 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Data Privacy</h3>
+                        <p class="text-gray-500 text-sm">Designed as a pass-through automation. We do not store your personal TikTok data on any permanent database.</p>
                     </div>
-                    <h3 class="font-semibold mb-2">Data Privacy</h3>
-                    <p class="text-gray-500 text-sm">Designed as a pass-through automation. We do not store your personal TikTok data on any permanent database.</p>
                 </div>
             </div>
         </section>
@@ -77,10 +84,9 @@
                 &copy; 2026 Video Automation. All rights reserved.
             </div>
             <div class="flex gap-6 text-sm">
-                <a href="privacy.html" class="text-gray-500 hover:text-gray-900">Privacy Policy</a>
-                <a href="terms.html" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
-                <!-- Changed mailto link to direct Gmail compose link -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jessicajung01012000@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900">Support</a>
+                <a href="privacy.html" class="text-gray-500 hover:text-gray-900 transition">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-500 hover:text-gray-900 transition">Terms of Service</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jessicajung01012000@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 transition">Support</a>
             </div>
         </div>
     </footer>
