@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Instructions | n8n-auto-video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+            <header class="border-b border-gray-200 pb-6 mb-8 text-center">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">User Data Deletion Instructions</h1>
+                <p class="text-gray-500"><strong>App Name:</strong> n8n-auto-video | <strong>Business:</strong> Jessicajung</p>
+                <p class="text-sm text-gray-400 mt-2">Compliance with Meta Platform Developer Policies</p>
+            </header>
+
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Data Storage Statement</h2>
+                    <p>The <strong>n8n-auto-video</strong> application is a private internal tool used exclusively for publishing content to our own Facebook Pages and Instagram accounts. <strong>We do not save, record, or maintain any databases containing personal information of public users who interact with our pages.</strong></p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">2. Your Right to Data Deletion</h2>
+                    <p>In accordance with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Meta's Developer Policies, users have the right to request the deletion of their personal data. Although our system does not hold such data, we provide a direct channel for you to submit a formal deletion request to ensure full compliance and peace of mind.</p>
+                </section>
+
+                <section class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-md mt-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">3. How to Submit a Data Deletion Request</h2>
+                    <p class="mb-4 text-gray-800">If you wish to formally request the verification and deletion of any potential data related to your Facebook or Instagram profile, please follow these steps:</p>
+                    
+                    <ol class="list-decimal list-inside space-y-3 font-medium text-gray-800 ml-2">
+                        <li>Send an email to our support team at: <a href="mailto:pmpprofessor@outlook.com" class="text-blue-600 underline">pmpprofessor@outlook.com</a></li>
+                        <li>Use the exact subject line: <span class="bg-white border border-gray-300 px-2 py-1 rounded text-sm text-red-600 font-mono">Data Deletion Request - n8n-auto-video</span></li>
+                        <li>In the body of the email, please include:
+                            <ul class="list-disc list-inside ml-6 mt-2 text-gray-600 font-normal space-y-1">
+                                <li>Your full name.</li>
+                                <li>The URL to your Facebook or Instagram profile.</li>
+                                <li>A brief statement requesting the deletion of your data.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Processing Time</h2>
+                    <p>Upon receiving your request, our technical team will manually query our internal n8n logs to verify that no data associated with your profile URL exists. We will process your request and send you a confirmation email of the deletion (or confirmation that no data was found) within <strong>3 to 5 business days</strong>.</p>
+                </section>
+            </div>
+        </div>
+        <footer class="text-center text-sm text-gray-400 mt-8">
+            &copy; 2026 Jessicajung. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
