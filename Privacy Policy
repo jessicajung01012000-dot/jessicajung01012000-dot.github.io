@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | n8n-auto-video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+            <header class="border-b border-gray-200 pb-6 mb-8 text-center">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+                <p class="text-gray-500"><strong>App Name:</strong> n8n-auto-video | <strong>Business:</strong> Jessicajung</p>
+                <p class="text-sm text-gray-400 mt-2">Effective Date: March 27, 2026</p>
+            </header>
+
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Introduction</h2>
+                    <p>Welcome to the Privacy Policy for the <strong>n8n-auto-video</strong> application, operated by <strong>Jessicajung</strong>. This application is designed exclusively as an internal workflow automation tool to manage and publish content to our owned and operated Facebook Pages and Instagram accounts.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">2. Information We Collect</h2>
+                    <p>Our application operates strictly on a server-to-server basis using Meta Graph API. <strong>We do not collect, store, or process any personal data from public Facebook or Instagram users.</strong> The application only utilizes system-level access tokens required to publish content on behalf of the Page administrator.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">3. How We Use Information</h2>
+                    <p>The system access tokens and Page IDs are used solely for the purpose of programmatic content posting (e.g., uploading videos, creating posts). We do not use this application to harvest user comments, messages, profiles, or any engagement metrics that contain Personally Identifiable Information (PII).</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Data Sharing and Disclosure</h2>
+                    <p>Because no public user data is collected, no user data is shared with, sold to, or transferred to any third-party services, advertisers, or external entities.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Data Security</h2>
+                    <p>We implement industry-standard security measures within our internal infrastructure (n8n) to protect our administrative access tokens and prevent unauthorized access to our social media assets.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-3">6. Contact Information</h2>
+                    <p>If you have any questions, concerns, or inquiries regarding this Privacy Policy or our data practices, please contact our Data Protection Officer at:</p>
+                    <p class="mt-2 font-medium text-blue-600"><a href="mailto:pmpprofessor@outlook.com">pmpprofessor@outlook.com</a></p>
+                </section>
+            </div>
+        </div>
+        <footer class="text-center text-sm text-gray-400 mt-8">
+            &copy; 2026 Jessicajung. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
